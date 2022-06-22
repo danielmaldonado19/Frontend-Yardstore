@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--1.Links copied.-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +11,6 @@
     
     <title>Login</title>
     <style>
-        /*2.Root vars & body settings copied.*/
         :root{
         --very-light-pink: #c7c7c7;
         --white: #ffffff;
@@ -28,21 +26,108 @@
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+        .login{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: var(--white);
+        }
+        /*1.Customize the main div.*/
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto auto;
+            /*auto means the row has to occupy the minimun height depending
+            of the container content. 1fr means to occupy one portion of
+            the space left(there's only one 1fr, so that row will occupy all
+            the space left).*/
+            width: 300px;
+        }
+        /*2.Customize the form container (it contains the must fill fields and the logo and the login btn.)*/
+        .logo{
+            width: 160px;
+            margin-bottom: 50px;
+            justify-self: center;
+            /*display:none;*/
+        }
+        /*3.Customize the logo*/
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        /*4.Set the order of the form container's elements.*/
+        .label{
+            font-size: var(--md);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        /*5.Edit the font of the labels.*/
+        .input{
+            background-color: var(--text-input-field);
+            border-radius: 4px;
+            height: 32px;
+            font-size: var(--md);
+            font-weight: thin;
+            padding: 4px;
+            border: none;
+            margin-bottom: 8px;
+        }
+        /*6.Style the input field*/
+        .login-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color:  var(--white);
+            height: 60px;
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 32px;
+            cursor: pointer;
+            margin-bottom: 12px;
+        }
+        /*7.Style the login btn.*/
+        .link{
+            font-size: var(--sm);
+            justify-self: center;
+            color: var(--hospital-green);
+            margin-bottom: 128px;
+        }
+        .link a{
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
+        /*8.Style the "Forgot my psswd" text.*/
+        .signup-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border-color: var(--hospital-green);
+            border-style: solid;
+            border-width: thin;
+            color:  var(--hospital-green);
+            height: 60px;
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 32px;
+            cursor: pointer;
+        }
+        /*9.Signup btn customized.*/
     </style>
 </head>
 <body>
     <div class="login">
-        <div class="login-form">
+        <div class="form-container">
 
             <img src="./assets/logos/logo_yard_sale.svg" class="logo" alt="logo">
             
             <form action="" class="form">
                 <label for="email" class="label">Email address</label>
-                <!--for atr has to match with id atr of the element this label
-                is associated with.-->
                 <input type="email" id="email" class="input input-email" placeholder="yourmail@gmail.com">
 
-                <label for="password" class="label">Email address</label>
+                <label for="password" class="label">Password</label>
                 <input type="password" id="password" class="input input-password" placeholder="********">
 
                 <input type="submit" value="Login" class="login-button">
