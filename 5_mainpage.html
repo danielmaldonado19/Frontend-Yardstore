@@ -22,6 +22,10 @@
         --text-input-field: #f7f7f7;
         --black: #000000;
         --hospital-green: #acd9b2;
+
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
         }
 
         body {
@@ -34,6 +38,7 @@
             /*auto-fill means we dont know the exact width of the device, so the cards container will adapt to all the devices. 240px is the default column width of the cards.*/
             gap: 24px;
             /*Creates a margin for each grid.*/
+            place-content: center;
         }
         /*3.*/
         .product-card{
@@ -61,6 +66,34 @@
         .product-description figure img{
             width: 40px;
             height: 40px;
+        }
+        .price{
+            font-size: var(--md);
+            font-weight: bold;
+            margin-bottom: 0;
+        }         
+        .name{
+            font-size: var(--sm);
+            margin-top: 0;
+            color: var(--very-light-pink)
+        }
+        @media(max-width: 640px){
+            .cards-container {
+            display: grid; /*1.*/
+            grid-template-columns: repeat(auto-fill, 140px); /*2.*/
+            /*auto-fill means we dont know the exact width of the device, so the cards container will adapt to all the devices. 240px is the default column width of the cards.*/
+            gap: 24px;
+            /*Creates a margin for each grid.*/
+            }
+            .product-card{
+            width: 140px;
+            }
+            .product-card img{
+            width: 100%;
+            height: 140px; /*5.*/
+            /*Here we indicates each product card will have its parent width.*/
+            }
+            
         }
     </style>
 </head>
