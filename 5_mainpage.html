@@ -28,6 +28,24 @@
             font-family: 'Quicksand', sans-serif;
             margin: 0;
         }
+        .cards-container{
+            display: grid; /*1.*/
+            grid-template-columns: repeat(auto-fill, 240px); /*2.*/
+            /*auto-fill means we dont know the exact width of the device, so the cards container will adapt to all the devices. 240px is the default column width of the cards.*/
+        }
+        /*3.*/
+        .product-card{
+            width: 240px;
+        }
+        /*4.*/
+        .product-card img{
+            width: 100%;
+            height: 240px; /*5.*/
+            /*Here we indicates each product card will have its parent width.*/
+            border-radius: 20px;
+            object-fit: cover; /*6.*/
+            /*This helps the image to preserve its w/h proportions.*/
+        }
     </style>
 </head>
 <body>
@@ -155,7 +173,7 @@
                 </figure>
             </div>
 
-            <div class="product-card">
+           <div class="product-card">
                 <img src="https://images.pexels.com/photos/2865977/pexels-photo-2865977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
                     <p class="price">25000</p>
