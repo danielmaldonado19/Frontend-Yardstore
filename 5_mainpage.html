@@ -32,6 +32,8 @@
             display: grid; /*1.*/
             grid-template-columns: repeat(auto-fill, 240px); /*2.*/
             /*auto-fill means we dont know the exact width of the device, so the cards container will adapt to all the devices. 240px is the default column width of the cards.*/
+            gap: 24px;
+            /*Creates a margin for each grid.*/
         }
         /*3.*/
         .product-card{
@@ -46,6 +48,20 @@
             object-fit: cover; /*6.*/
             /*This helps the image to preserve its w/h proportions.*/
         }
+        .product-description{
+            display: flex;
+            /*To distribute price&name and icon in the screed.*/
+            justify-content: space-between;
+            /*Split the info and the icon to the left & right sides.*/
+            align-items: center;
+        }
+        .product-description figure{
+            margin: 0;
+        }
+        .product-description figure img{
+            width: 40px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -55,144 +71,171 @@
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">350</p>
-                    <p class="name">Iphone X</p>
-                </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                    <div>
+                        <p class="price">350</p>
+                        <p class="name">Iphone X</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>  
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/8194537/pexels-photo-8194537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">15000</p>
-                    <p class="name">Suzuki GSXR</p>
+                    <div>
+                        <p class="price">15000</p>
+                        <p class="name">Suzuki GSXR</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/12121568/pexels-photo-12121568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">7000</p>
-                    <p class="name">Suzuki Jimny</p>
+                    <div>
+                        <p class="price">7000</p>
+                        <p class="name">Suzuki Jimny</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">2000</p>
-                    <p class="name">Macbook Pro</p>
+                    <div>
+                        <p class="price">2000</p>
+                        <p class="name">Macbook Pro</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/3695476/pexels-photo-3695476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">2500</p>
-                    <p class="name">Dj setup</p>
+                    <div>
+                        <p class="price">2500</p>
+                        <p class="name">Dj setup</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/1787235/pexels-photo-1787235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">1500</p>
-                    <p class="name">Canon EOS</p>
+                    <div><p class="price">1500</p>
+                        <p class="name">Canon EOS</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/8134748/pexels-photo-8134748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">70000</p>
-                    <p class="name">House</p>
+                    <div>
+                        <p class="price">120000</p>
+                        <p class="name">House</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/7862491/pexels-photo-7862491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">600</p>
-                    <p class="name">Gaming chair</p>
+                    <div>
+                        <p class="price">600</p>
+                        <p class="name">Gaming chair</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">600</p>
-                    <p class="name">Broadcasting microphone</p>
+                    <div>
+                        <p class="price">600</p>
+                        <p class="name">Broadcasting microphone</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">2500</p>
-                    <p class="name">Men's clothing</p>
-                </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                    <div>
+                        <p class="price">2500</p>
+                        <p class="name">Men's clothing</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                 </div>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/955938/pexels-photo-955938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">2500</p>
-                    <p class="name">Body tattoo</p>
+                    <div>
+                        <p class="price">2500</p>
+                        <p class="name">Body tattoo</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
            <div class="product-card">
                 <img src="https://images.pexels.com/photos/2865977/pexels-photo-2865977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">25000</p>
-                    <p class="name">Rolex</p>
+                    <div>
+                        <p class="price">25000</p>
+                        <p class="name">Rolex</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/7679824/pexels-photo-7679824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="product-img">
                 <div class="product-description">
-                    <p class="price">1500</p>
-                    <p class="name">Gold chain</p>
+                    <div>
+                        <p class="price">1500</p>
+                        <p class="name">Gold chain</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./assets/icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
 
