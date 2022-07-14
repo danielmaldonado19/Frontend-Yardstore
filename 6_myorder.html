@@ -37,7 +37,11 @@
             width: 100vw;
             height: 100vh;
             place-items: center;
-            /*The grid is used to place the column in the center*/
+            /*The grid is used to place the column in the center*/ 
+        }
+        .title{
+            margin-bottom: -120px;
+            font-size: var(--md);
         }
         .order-container{
             width: 480px;
@@ -87,22 +91,27 @@
             font-weight: lighter;
         }
         .image{
-            height: 120px;
-            width: 120px;
+            height: 100px;
+            width: 100px;
             border-radius: 40px;
         }
         .price{
             font-size: var(--lg);
             font-weight: bold;
         }
+        @media(max-width: 640px) {
+            .title {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="my-order">
         <div class="title">
-            <h1>
+            <h2>
                 My order
-            </h1>
+            </h2>
         </div>
         
 
